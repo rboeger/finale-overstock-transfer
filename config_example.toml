@@ -1,0 +1,41 @@
+# this is an example config file for the overstock transfer report
+
+# header is displayed on the top of the page
+[header]
+title = "Overstock Transfer Report"
+description = "This report lists items that can be transferred from overstock to picking locations"
+
+[options]
+# exclusions are products that will be ignored
+exclusions = [
+    "Ex_1234",
+    "Ex_83998"
+]
+
+[sections]
+# define sections here. new sections will automatically be added to the report
+# title is the title that will be displayed at the heading of the section
+# subsets are the supplier subsets that will be parsed through in the section
+# supplier minimums are the minimum allowed quantity in picking locations before transferring is requred
+
+# tool section example
+[sections.tools]
+title = "Tools"
+subsets = [ 
+    "ToolCat1",
+    'ToolCat2',
+    'ToolCat3',
+    'ToolCat4',
+]
+supplier_minimums = { "ToolSupplier1" = 5,"ToolSupplier2" = 12,"ToolSupplier3" = 5 }
+
+# accessories section example
+[sections.accessories]
+title = "Accessories"
+subsets = [
+    'AccCat1',
+    'AccCat2',
+    'AccCat3',
+    'AccCat4',
+]
+supplier_minimums = { "AccSupplier1" = 2, "AccSupplier2" = 6, "AccSupplier3" = 6 }
