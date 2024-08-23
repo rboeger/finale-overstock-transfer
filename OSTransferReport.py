@@ -160,7 +160,6 @@ class Section:
     
 
 class Item:
-    # updating this. Need to replace filter with section_data
     def __init__(self, id, sublocs, qtys, stdpack, supplier, section_data, exclusions):
         self.product_id = id
         self.all_sublocations = sublocs
